@@ -17,5 +17,7 @@ require_relative 'controllers/application'
 
 enable :sessions
 set :session_secret, 'my unique encryption key!'
+
 use Rack::Flash
+use Rack::MethodOverride
 
