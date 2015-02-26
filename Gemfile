@@ -1,10 +1,11 @@
-source 'https://rubygems.org/'
+rvm source 'https://rubygems.org/'
 
 gem 'sinatra'
 gem 'data_mapper'
 gem 'dm-postgres-adapter'
 gem 'bcrypt-ruby'
 gem 'rack-flash3'
+gem 'thin'
 
 group :development, :test do
   gem 'database_cleaner'
