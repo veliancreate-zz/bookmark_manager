@@ -1,0 +1,32 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="" href="">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="../public/css/normalize.css">
+    <link rel="stylesheet" href="../public/css/main.css">
+
+  </head>
+  <body>
+    <% if flash[:errors] && !flash[:errors].empty? %>
+      Sorry, there were the following problems with the form.
+      <ul id="errors">
+        <% flash[:errors].each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      </ul>
+    <% end %>
+    <% if @current_user %>
+      Welcome, <%= @current_user.email %>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

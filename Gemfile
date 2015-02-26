@@ -1,15 +1,15 @@
 source 'https://rubygems.org/'
 
-gem 'capybara'
-gem 'cucumber'
-gem 'cucumber-sinatra'
+gem 'sinatra'
 gem 'data_mapper'
 gem 'dm-postgres-adapter'
-gem 'sinatra'
-gem 'database_cleaner'
+gem 'bcrypt-ruby'
+gem 'rack-flash3'
 
-group :test do
+group :development, :test do
+  gem 'database_cleaner'
   gem 'rspec'
+  gem 'capybara'
 end
 
 
